@@ -60,8 +60,9 @@ class msgController extends Controller
 
         Mail::to('leonardo.strupeni@gmail.com')->send(new AgrostyMail($mensaje,$asunto['desc'],$fecha));
 
-        $subject = subject::all();
-        return view('form', compact('subject')); 
+        $asuntos = subject::all();
+        $listamjs = message::all();
+        return view('layout', compact('asuntos','listamjs')); 
     }
 
     public function show($id)

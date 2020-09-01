@@ -11,6 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        DB::table('Subjects')->insert(['desc' => 'Reclamo']);
+        DB::table('Subjects')->insert(['desc' => 'Solicitud']);
+        DB::table('Subjects')->insert(['desc' => 'Queja']);
+
+        factory(\App\Message::class)->times(50)->create();
     }
 }

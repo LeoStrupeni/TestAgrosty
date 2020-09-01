@@ -4,10 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class message extends Model
+class Message extends Model
 {
-    public $table = 'message';
-    public $primaryKey = 'id';
     public $timestamps = false;
     public $guarded = [];
 
@@ -15,5 +13,4 @@ class message extends Model
     {
         return $this->belongsTo('app\subject', 'id');
     }
-
 }

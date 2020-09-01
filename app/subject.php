@@ -4,10 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class subject extends Model
+class Subject extends Model
 {
-    public $table = 'subjects';
-    public $primaryKey = 'id';
     public $timestamps = false;
     public $guarded = [];
 }
